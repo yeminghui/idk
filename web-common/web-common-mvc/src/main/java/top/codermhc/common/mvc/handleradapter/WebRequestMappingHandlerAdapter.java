@@ -1,4 +1,4 @@
-package top.codermhc.common.mvc.handlerAdapter;
+package top.codermhc.common.mvc.handleradapter;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebBindingInitializer;

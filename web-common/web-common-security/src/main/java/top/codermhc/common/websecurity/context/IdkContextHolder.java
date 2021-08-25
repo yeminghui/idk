@@ -1,14 +1,23 @@
 package top.codermhc.common.websecurity.context;
 
+/**
+ * @author yemh
+ */
 public class IdkContextHolder {
 
-    private static final ThreadLocal<IdkContext> context = new ThreadLocal<>();
+    private static final ThreadLocal<IdkContext> CONTEXT = new ThreadLocal<>();
 
     public static IdkContext getContext() {
-        return context.get();
+        return CONTEXT.get();
     }
 
     public static void setContext(IdkContext ctx) {
-        context.set(ctx);
+        CONTEXT.set(ctx);
     }
+
+    public static void clear() {
+        CONTEXT.remove();
+    }
+
+    private IdkContextHolder() {}
 }

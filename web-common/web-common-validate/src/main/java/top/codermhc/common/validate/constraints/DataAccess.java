@@ -18,7 +18,13 @@ import java.lang.annotation.Target;
 public @interface DataAccess {
 
     enum RoleLevel {
+        /**
+         * 访问本级权限
+         */
         SELF,
+        /**
+         * 访问下级权限
+         */
         BELOW,
     }
 

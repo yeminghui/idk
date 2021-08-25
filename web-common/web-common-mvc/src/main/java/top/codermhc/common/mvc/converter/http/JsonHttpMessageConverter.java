@@ -32,7 +32,7 @@ public class JsonHttpMessageConverter extends FastJsonHttpMessageConverter {
         return Collections.singletonList(MediaType.APPLICATION_JSON);
     }
 
-    {
+    public JsonHttpMessageConverter() {
         FastJsonConfig fastJsonConfig = getFastJsonConfig();
         fastJsonConfig.setFeatures(Feature.OrderedField);
         fastJsonConfig.setSerializerFeatures(SerializerFeature.WriteDateUseDateFormat);

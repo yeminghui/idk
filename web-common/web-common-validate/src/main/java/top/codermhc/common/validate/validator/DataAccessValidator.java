@@ -5,6 +5,9 @@ import top.codermhc.common.validate.constraints.DataAccess;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * @author yemh
+ */
 public class DataAccessValidator implements ConstraintValidator<DataAccess, Object> {
 
     DataAccess.RoleLevel roleLevel;
@@ -19,12 +22,7 @@ public class DataAccessValidator implements ConstraintValidator<DataAccess, Obje
         if (roleLevel.equals(DataAccess.RoleLevel.SELF)) {
             return true;
         }
-
-        if (roleLevel.equals(DataAccess.RoleLevel.BELOW)) {
-            return false;
-        }
-
-        return false;
+        return roleLevel.equals(DataAccess.RoleLevel.BELOW);
     }
 
 }
